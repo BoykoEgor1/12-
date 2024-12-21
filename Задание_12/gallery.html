@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Ломбард</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="container">
+        <header>
+            <h1>Ломбард</h1>
+            <h1>Мы работаем для Вас</h1>
+        </header>
+
+        <nav class="horizontal-menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О компании</a></li>
+                <li><a href="employee.html">Наши сотрудники</a></li>
+                <li><a href="order.html">Заказы</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="https://www.mvd.ru/" target="_blank" rel="noopener" class="normal-weight" style="color: rgb(6, 6, 46);">Мы чтим УК РФ</a></li>
+            </ul>
+        </nav>
+
+        <div class="main-content">
+            <nav class="vertical-menu">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="employee.html">Наши сотрудники</a></li>
+                    <li><a href="order.html">Заказы</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="https://www.mvd.ru/" target="_blank" rel="noopener" class="normal-weight" style="color: rgb(6, 6, 46);">Мы чтим УК РФ</a></li>
+                </ul>
+            </nav>
+            <main class="content">
+            
+
+                <h2>Галерея рогов</h2>
+                <center>
+            <figure>
+                <iframe src="img\fullimg\1.jpg" name="color" width="500" height="500"></iframe>
+            </figure>  
+
+            <div class="gallery">
+                <a href="img\fullimg\1.jpg" target="color">
+                    <img src="img\preview\15.jpg">
+                    <div class="caption">цепочка<p>15000P</p></div>
+                </a>
+            </div>
+            <div class="gallery">
+                <a href="img\fullimg\2.jpg" target="color">
+                    <img src="img\preview\25.jpg" alt="Рога">
+                    <div class="caption">Кольцо<p>17500P</p></div>
+                </a>
+            </div>
+            <div class="gallery">
+                <a href="img\fullimg\3.jpg" target="color">
+                    <img src="img\preview\35.jpg">
+                    <div class="caption">Кольцо с камнями<p>35000P</p></div>
+                </a>
+            </div>
+            
+            <div class="gallery">
+                <a href="img\fullimg\4.jpg" target="color">
+                    <img src="img\preview\45.jpg">
+                    <div class="caption">Часы<p>23000P</p></div>
+                </a>
+            </div>
+            
+            <div class="gallery">
+                <a href="img\fullimg\5.jpg" target="color">
+                    <img src="img\preview\55.jpg">
+                    <div class="caption">Браслею<p>12000P</p></div>
+                </a>
+            </div>
+
+            <div class="gallery">
+                <a href="img\fullimg\6.jpg" target="color">
+                    <img src="img\preview\65.jpg">
+                    <div class="caption">Серги<p>23000P</p></div>
+                </a>
+            </div>
+
+            <div class="gallery">
+                <a href="img\fullimg\8.jpg" target="color">
+                    <img src="img\preview\85.jpg">
+                    <div class="caption">Серги<p>23000P</p></div>
+                </a>
+            </div>
+
+            <script>
+                function changeFrame(imageSrc) {
+                    document.getElementById('imageFrame').src = imageSrc; // Изменяем источник фрейма
+                }
+            </script>
+
+
+</main>
+</div>
+      <footer>
+        &copy; Бендер и компания
+        <button class="scroll-to-top" onclick="scrollToTop()">Наверх</button>
+      </footer>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</section> 
+</body>
+</html>

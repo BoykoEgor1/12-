@@ -1,0 +1,423 @@
+
+    /* ФОН */
+body {
+    font: 10pt Arial, Helvetica, sans-serif; /* Шрифт на веб-странице */
+    background: url('olega.jpg') no-repeat center center fixed; /* Фоновое изображение */
+    background-size: cover; /* Масштабирование изображения для заполнения экрана */
+    }
+
+    /* ГЛАВНЫЙ КОНТЕЙНЕР */
+.container {
+    display: flex; /* Используем Flexbox */
+    flex-direction: column; /* Вертикальное расположение элементов */
+    width: 1000px; /* Ширина слоя */
+    margin: 0 auto; /* Выравнивание по центру */
+    background: #f0f0f0; /* Цвет фона контейнера */
+    opacity: 0.98; /* Полупрозрачность кнопки */
+    border-radius: 12px; /* Скругление углов */
+    }
+
+    /* ЗАГОЛОВОК-ШАПКА */
+header {
+    font-size: 1.5em; /* Размер текста для верхнего заголовка */
+    text-align: center; /* Выравнивание по центру */
+    padding: 2px; /* Отступы вокруг текста */
+    background: linear-gradient(135deg, #2f708f, #c0d6d6); /* Диагональный линейный градиент */
+    color: #ffe; /* Цвет текста */
+    border-radius: 12px; /* Скругление углов */
+    }
+
+    /* ГЛАВНЫЙ КОНТЕЙНЕР С МЕНЮ И СОДЕРЖИМЫМ */
+.main-content {
+    display: flex; /* Используем Flexbox для основного контента */
+    flex: 1; /* Занимаем оставшееся пространство */
+    }
+
+    /* ВЕРТИКАЛЬНОЕ МЕНЮ */
+nav {
+    margin-top: 7px;
+    margin-left: 7px;
+    margin-bottom: 7px;
+    width: 155px;
+    padding: 0 10px;
+    background: linear-gradient(to bottom, rgba(67, 46, 145, 0.61), rgba(150, 30, 140, 0.5)), url('background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    }
+
+    /* СТИЛИ ДЛЯ ВЫПАДАЮЩЕГО ВР МЕНЮ */
+.dropdown {
+    position: relative;
+    cursor: pointer;
+    }
+.dropdown > a {
+    color: black; /* Цвет текста черный для ссылки "Медиа" */
+    }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, rgba(67, 46, 145, 0.61), rgba(150, 30, 140, 0.5)), url('background-image.jpg');
+    }
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black !important; /* Принудительно черный цвет для всех ссылок в выпадающем меню */
+    font-weight: normal;
+    }
+.dropdown-content a:hover {
+    background-color: rgb(228, 227, 227);
+    }
+.dropdown:hover .dropdown-content {
+    display: block;
+    }
+    /* Анимация для "Мы чтим УК РФ" */
+.vertical-menu ul li:last-child {
+    transition: margin-top 0.3s ease;
+    margin-top: 0; /* Исходное положение */
+    }
+.vertical-menu .dropdown:hover ~ li:last-child {
+    margin-top: 72px;
+    }
+    
+    /* ГОРИЗОНТАЛЬНОЕ МЕНЮ */
+.horizontal-menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-radius: 12px;
+    color: #fff;
+    width: 985px;
+    transition: height 0.3s ease; /* Добавляем анимацию для высоты */
+    background: linear-gradient(to bottom, rgba(67, 46, 145, 0.61), rgba(150, 30, 140, 0.5)), url('background-image.jpg');
+    }
+    /* СТИЛИ ДЛЯ ВЫПАДАЮЩЕГО ГР МЕНЮ */
+.horizontal-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    }
+.horizontal-menu li {
+    position: relative;
+    }
+.horizontal-menu a {
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 25px;
+    }
+.horizontal-menu .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, (67, 46, 145, 0.61), rgba(150, 30, 140, 0.5));
+    }
+.horizontal-menu .dropdown:hover .dropdown-content {
+    display: block;
+    }
+.horizontal-menu .dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black !important;
+    }
+.horizontal-menu .dropdown-content a:hover {
+    background-color: rgb(228, 227, 227);
+    }
+    /* Анимация для увеличения высоты контейнера */
+.horizontal-menu .dropdown:hover {
+    height: 85px; /* Увеличиваем высоту контейнера при наведении */
+    }
+
+    /* КОНТЕЙНЕР ДЛЯ РАБОЧЕГО МЕСТА */
+.content {
+    margin-left: 10px; /* Отступ слева */
+    padding: 10px; /* Поля вокруг текста */
+    background: #fff; /* Цвет фона правой колонки */
+    min-height: 300px; /* Минимальная высота контейнера */
+    flex: 1; /* Занимаем оставшееся пространство */
+    border-radius: 12px; /* Скругление углов */
+    margin-bottom: 7px; /* Отступ снизу */
+    }
+
+    /* ПОДВАЛ */
+footer {
+    background: radial-gradient(ellipse at center, #8fa09b, #4a7b7a); /* Эллиптический радиальный градиент */
+    color: #fff; /* Цвет текста */
+    padding: 5px; /* Отступы вокруг текста */
+    clear: both; /* Отменяем действие float */
+    position: relative; /* Устанавливаем относительное позиционирование */
+    border-radius: 12px; /* Скругление углов */
+    }
+
+    /* БОЛЕЕ МЕНЬШИЙ ЗАГОЛОВОК */
+h2 {
+    font-size: 1.1em; /* Размер шрифта */
+    color: #800040; /* Цвет текста */
+    margin-top: 0; /* Отступ сверху */
+    text-align: center; /* Центрирование текста на странице */
+    }
+
+    /* ДЛЯ КНОПКИ ВВЕРХ */
+.scroll-to-top {
+    position: fixed; /* Изменяем на фиксированное позиционирование */
+    bottom: 10px; /* Отступ от нижней границы экрана */
+    right: 2%; /* Отступ от правой границы */
+    background-color: #2da84c; /* Цвет фона */
+    color: white; /* Цвет текста */
+    border: none; /* Убираем границу */
+    border-radius: 5px; /* Скругление углов */
+    padding: 5px 10px; /* Отступы внутри кнопки */
+    font-size: 10px; /* Размер шрифта */
+    cursor: pointer; /* Указатель при наведении */
+    transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease; /* Плавный переход */
+    opacity: 0.7; /* Полупрозрачность кнопки */
+    }
+.scroll-to-top:hover {
+    background-color: #c89a1e; /* Цвет фона при наведении */
+    transform: scale(1.05); /* Увеличение кнопки при наведении */
+    opacity: 1; /* Полная непрозрачность при наведении */
+    }
+.scroll-to-top:focus {
+    outline: none; /* Убираем обводку при фокусе */
+    }
+
+    /* ДЛЯ МАРКЕРОВ У ССЫЛОК В ГОРИЗОНТАЛЬНОМ МЕНЮ */
+.horizontal-menu ul {
+    list-style-type: none; /* Убираем стандартные маркеры */
+    padding: 0; /* Убираем отступы */
+    color: black; /* Цвет текста черный */
+    font-weight: bold; /* Жирный шрифт */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Плавный переход цвета и подчеркивания */
+    }
+.horizontal-menu li {
+    color: black; /* Цвет текста черный */
+    margin-bottom: 3px; /* Увеличиваем расстояние между ссылками */
+    font-weight: bold; /* Жирный шрифт */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Плавный переход цвета и подчеркивания */
+    }
+.horizontal-menu li:hover a {
+    text-decoration: none; /* Убираем подчеркивание при наведении */
+    color: rgb(70, 67, 67); /* Изменение цвета текста при наведении */
+    }
+.horizontal-menu a:visited {
+    color: black; /* Цвет текста черный для посещенных ссылок */
+    }
+.horizontal-menu .normal-weight {
+    font-weight: normal; /* Убираем жирный шрифт для мвд */
+    }
+
+    /* ДЛЯ МАРКЕРОВ У ССЫЛОК В ВЕРТИКАЛЬНОМ МЕНЮ */
+.vertical-menu ul {
+    list-style-type: none; /* Убираем стандартные маркеры */
+    padding: 0; /* Убираем отступы */
+    color: black; /* Цвет текста черный */
+    font-weight: bold; /* Жирный шрифт */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Плавный переход цвета и подчеркивания */
+    }
+.vertical-menu li {
+    position: relative; /* Для позиционирования маркера */
+    padding-left: 12px; /* Отступ для текста от маркера */
+    color: black; /* Цвет текста черный */
+    margin-bottom: 12px; /* Увеличиваем расстояние между ссылками */
+    font-weight: bold; /* Жирный шрифт */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Плавный переход цвета и подчеркивания */
+    }
+.vertical-menu li::before {
+    content: '•'; /* Собственный маркер */
+    position: absolute; /* Позиционируем маркер */
+    left: 0; /* Слева от текста */
+    color: black; /* Цвет маркера */
+    transition: color 0.3s ease; /* Плавный переход цвета маркера */
+    }
+.vertical-menu li:hover::before {
+    color: rgb(144, 139, 139); /* Изменение цвета маркера при наведении */
+    }
+.vertical-menu li:hover a {
+    padding-left: 10px; /* Сдвигаем текст вправо на 10px при наведении */
+    text-decoration: none; /* Убираем подчеркивание при наведении */
+    color: rgb(70, 67, 67); /* Изменение цвета текста при наведении */
+    }
+.vertical-menu a:visited {
+    color: black; /* Цвет текста черный для посещенных ссылок */
+    }
+.vertical-menu .normal-weight {
+    font-weight: normal; /* Убираем жирный шрифт для мвд */
+    }
+
+    /* ДЛЯ ВСЕХ ТАБЛИЦ */
+table {
+    width: 99%; /* Занимает всю ширину контейнера */
+    border-collapse: collapse; /* Убирает двойные границы между ячейками */
+    margin: 20px 0; /* Отступы сверху и снизу */
+    font-family: 'Arial', sans-serif; /* Гарнитура шрифта */
+    }
+th, td {
+    border: 3px solid #2980b9; /* Синяя рамка для ячеек */
+    padding: 10px; /* Отступы внутри ячеек */
+    text-align: left; /* Выравнивание текста по левому краю */
+    }
+th {
+    background-color: #2980b9; /* Цвет фона заголовков */
+    color: white; /* Цвет текста заголовков */
+    }
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Светло-серый фон для четных строк */
+    }
+tr:hover {
+    background-color: #bb56b2; /* Цвет фона строки при наведении */
+    }
+
+    /* ДЛЯ ТАБЛИЦЫ ОБРАЗОВАНИЕ */
+.education {
+    width: 99%; /* Таблица занимает всю ширину контейнера */
+    border-collapse: collapse; /* Убираем двойные границы */
+    margin: 20px 0; /* Отступы сверху и снизу */
+    font-family: 'Arial', sans-serif; /* Шрифт таблицы */
+    text-align: center; /* Выравнивание текста по центру */
+    border-collapse: separate; /* Разделяет рамки ячеек */
+    border-spacing: 2px; /* Промежуток между ячейками */
+    width: 99%; /* Ширина таблицы */
+    border: 1px solid black; /* Тонкая рамка вокруг всей таблицы */
+    }
+table.education th {
+    background-color: #701919; /* Красный цвет фона */
+    color: #ffffff; /* Белый цвет текста */
+    text-align: center; /* Выравнивание текста по центру */
+    font-style: italic; /* Курсив для текста */
+    }
+.total-row {
+    font-weight: bold; /* Жирный шрифт */
+    text-align: right; /* Выравнивание текста по правому краю */
+    }
+.total-header {
+    text-align: right; /* Выравнивание текста по правому краю */
+    font-weight: bold; /* Жирный шрифт */
+    }
+.education th, .education td {
+    border: 1px solid black; /* Тонкая рамка вокруг ячеек */
+    padding: 5px; /* Отступы внутри ячеек */  
+    vertical-align: middle; /* Вертикальное выравнивание по центру */
+    transition: opacity 0.3s ease; /* Плавный переход для изменения прозрачности */
+    }
+.education td:hover, .education th:hover {
+    opacity: 0; /* Прозрачность текста при наведении */
+    }
+
+    /* ДЛЯ ГАЛЕРЕИИ */
+.gallery {
+    position: relative; /* Устанавливает относительное позиционирование для контейнера галереи */
+    display: inline-block; /* Позволяет элементу занимать только необходимое пространство */
+    margin: 10px; /* Отступ вокруг галереи */
+    text-align: center; /* Центрирование текста внутри галереи */
+    }
+.gallery img {
+    width: 150px; /* Устанавливает ширину изображений в галерее */
+    height: auto; /* Автоматическая высота для сохранения пропорций изображения */
+    transition: 0.3s; /* Плавный переход для эффектов при наведении */
+    text-align: center; /* Центрирование текста (хотя это не обязательно для изображений) */
+    }
+.caption {
+    position: absolute; /* Абсолютное позиционирование для размещения элемента относительно родителя */
+    bottom: 0; /* Прикрепляет элемент к нижней части родительского контейнера */
+    left: 0; /* Устанавливает элемент в левом краю родительского контейнера */
+    right: 0; /* Устанавливает элемент в правом краю родительского контейнера */
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон с 70% непрозрачностью */
+    color: white; /* Цвет текста - белый */
+    text-align: center; /* Центрирование текста внутри элемента */
+    opacity: 0; /* Элемент скрыт по умолчанию */
+    transition: opacity 0.3s; /* Плавный переход для изменения непрозрачности */
+    }
+
+    /* ДЛЯ ИЗБРАЖЕНИЙ В ГАЛЕРЕИИ */
+.gallery {
+    display: inline-block; /* Используем inline-block для горизонтального выравнивания */
+    margin: 10px; /* Пробел между изображениями */
+    width: calc(33.33% - 20px); /* Три изображения в строке с учетом отступов */
+    box-sizing: border-box; /* Включаем отступы и границы в общую ширину и высоту элемента */
+    }
+.gallery img {
+    width: 100%; /* Делаем изображения адаптивными */
+    height: auto; /* Сохраняем соотношение сторон */
+    border-radius: 8px; /* Опционально: закругленные углы */
+    }
+.caption {
+    text-align: center; /* Центрируем подпись */
+    font-weight: bold; /* Делаем подпись жирной */
+    margin-top: 5px; /* Пробел между изображением и подписью */
+    }
+.gallery:hover .caption {
+    opacity: 1; /* Показать при наведении */
+    }
+
+    /* ДЛЯ ВСЕХ ИЗОБРАЖЕНИЙ */
+    img {
+        border: 3px solid rgb(0, 245, 61); /* Установим сплошную рамку зеленого цвета */
+        width: 100px; /* Уменьшенная ширина изображения */
+        height: auto; /* Сохраним пропорции высоты */
+        border-radius: 50px; /* Сгладим углы рамки */
+        box-shadow: 0 10px 50px rgba(59, 218, 59, 0.2); /* Уменьшенная тень для объема */
+        transition: transform 0.3s; /* Плавный эффект при наведении */
+    }
+
+    /* ДЛЯ СТРАНИЦЫ СОТРУДНИКИ */
+.unit {
+    display: flex; /* Включает флекс-макет */
+    flex-wrap: wrap; /* Позволяет элементам переноситься на следующую строку */
+    justify-content: space-around; /* Распределяет пространство вокруг элементов */
+    margin: 20px; /* Добавляет отступ вокруг контейнера */
+    }
+.employee {
+    flex: 1 1 200px; /* Flex-grow, flex-shrink и базовая ширина */
+    margin: 10px; /* Добавляет отступ между блоками сотрудников */
+    padding: 10px; /* Добавляет внутренний отступ в каждом блоке */
+    border: 1px solid #ccc; /* Опционально: добавляет границу вокруг каждого блока */
+    border-radius: 5px; /* Опционально: скругляет углы */
+    text-align: center; /* Центрирует текст и изображения */
+    }
+.employee img {
+    max-width: 100%; /* Обеспечивает адаптивность изображений */
+    height: auto; /* Сохраняет пропорции изображений */
+    }
+
+   /* ДЛЯ ФОРМЫ ЗАКАЗА */
+.order-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирование по горизонтали */
+    justify-content: center; /* Центрирование по вертикали */
+    text-align: center; /* Центрирование текста */
+    }
+input:focus { /* Подсветка элементов формы в фокусе */
+    outline: none; /* Убираем стандартное обрамление */
+    border: 2px solid rgb(0, 123, 255); /* Изменяем цвет рамки на синий */
+    background-color: rgba(0, 123, 255, 0.1); /* Легкий фон при фокусе */ 
+    }
+.dodin {
+    text-align: center; /* Выравнивание текста по правому краю */
+    font-weight: bold; /* Жирный шрифт */
+    }
+
+    /* ДЛЯ АДАПТИВНОЙ ВЕРСТКИ(ГАЛЕРЕЯ) */
+@media (max-width: 768px) {
+    .gallery {
+        width: calc(50% - 20px); /* Два изображения в строке на меньших экранах */
+    }
+    }
+@media (max-width: 480px) {
+    .gallery {
+        width: 100%; /* Одно изображение в строке на очень маленьких экранах */
+    }
+    }
